@@ -1,0 +1,218 @@
+.projects {
+    height: auto;
+    width: 69.375rem;
+    max-width: calc(100% - 2rem);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.header-row, .news_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider-controls {
+    display: flex;
+    flex-shrink: 0;
+    margin-left: 0;
+}
+
+.slider-controls .slider-prev, .slider-controls .slider-next {
+    border: 0.125rem solid var(--color-accent);
+    width: 3.4375rem;
+    height: 3.4375rem;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.5rem;
+    color: var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--transition-duration) ease, color var(--transition-duration) ease;
+}
+
+.slider-controls .slider-prev:hover,
+.slider-controls .slider-next:hover {
+    background: var(--color-accent);
+    color: var(--color-light);
+}
+
+.slider-controls .slider-prev::before {
+    content: '<';
+}
+
+.slider-controls .slider-next::before {
+    content: '>';
+}
+
+.slider-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin-top: 3.44rem;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    gap: 1.88rem;
+    width: fit-content;
+    max-width: 100%;
+    transition: transform 0.5s ease;
+    padding-left: 0;
+    justify-content: flex-start;
+}
+
+.slider_box {
+    width: 33.75rem;
+    height: 25rem;
+    position: relative;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.slider_box--image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slider_box--image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.slider_box--content {
+    position: absolute;
+    bottom: 2.1875rem;
+    right: 2.1875rem;
+    width: 15.625rem;
+    height: 6.875rem;
+    background: var(--color-light);
+    padding: 1.25rem 0 0 1.5625rem;
+    transition: background var(--transition-duration) ease;
+    z-index: 10;
+}
+
+.slider_box:hover .slider_box--content {
+    background: var(--color-light);
+}
+
+.slider_box-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.056rem;
+    color: var(--color-dark);
+    margin-bottom: 0.875rem;
+}
+
+.slider_box-text {
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 0.875rem;
+    color: var(--color-dark);
+    width: 12.5rem;
+    height: 2.125rem;
+}
+
+@media screen and (max-width: 1110px) {
+    .projects {
+        width: calc(100% - 2rem);
+        max-width: 33.75rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projects {
+        width: calc(100% - 2 * 7.12rem);
+        max-width: 33.75rem;
+        margin-left: 7.12rem;
+        margin-right: 7.12rem;
+    }
+
+    .slider-controls {
+        margin-left: 0.5rem;
+    }
+
+    .slider-container {
+        margin-top: 2.5rem;
+        justify-content: center;
+    }
+
+    .slider {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 696px) {
+    .projects {
+        width: calc(100% - 2rem);
+        max-width: calc(100% - 2rem);
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .slider_box {
+        width: 16.875rem;
+        height: 13.8125rem;
+    }
+
+    .slider_box--content {
+        width: 7.8125rem;
+        height: 3.8125rem;
+        bottom: 1.19rem;
+        right: 1.56rem;
+        padding: 0.25rem 0 0 0.78125rem;
+    }
+
+    .slider_box-title {
+        font-size: 0.625rem;
+        letter-spacing: 0.03125rem;
+        margin-bottom: 0;
+    }
+
+    .slider_box-text {
+        font-size: 0.625rem;
+        width: 6.25rem;
+        height: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .slider-controls {
+        top: 0.5rem;
+        right: 0rem;
+        flex-direction: row;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .slider-container {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .projects {
+        width: calc(100% - 2rem);
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .header-row {
+        width: 100%;
+        max-width: 100%;
+    }
+}
